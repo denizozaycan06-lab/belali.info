@@ -179,3 +179,73 @@ transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
     width: 500px; 
     max-width: 90vw;
 }
+
+/* ===========================
+   MOBİL UYUMLULUK (RESPONSIVE)
+=========================== */
+
+@media (max-width: 768px) {
+
+    /* 1. Tipografiyi Ehlileştir */
+    h1 {
+        font-size: 3.5rem; /* 6rem'den düştü */
+        letter-spacing: -1px;
+    }
+
+    h2 {
+        font-size: 2.5rem; /* 4rem'den düştü */
+    }
+
+    .alt-baslik {
+        font-size: 1rem;
+        letter-spacing: 5px;
+    }
+    
+    .title {
+        margin-top: -2rem; /* Mobilde biraz yukarı alalım */
+    }
+
+    /* 2. Panelleri Düzenle */
+    .panel {
+        /* Mobilde adres çubuğu sorunu olmasın diye svh kullanıyoruz */
+        height: 100svh; 
+        padding: 1rem; /* Kenarlardan boşluk */
+    }
+
+    /* 3. Pinterest Bölümü: Alt Alta Diz */
+    .split-layout {
+        flex-direction: column-reverse; /* Resmi üste, yazıyı alta al */
+        gap: 2rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .text-side {
+        text-align: center; /* Yazıyı ortala */
+    }
+
+    /* Kart Destesini Küçült */
+    .card-deck {
+        transform: scale(0.75); /* %75 oranında küçült */
+        margin-bottom: 1rem;
+    }
+    
+    /* Mobilde hover olmadığı için tıklayınca açılsın (active) */
+    .card-deck:active img:nth-child(1) { transform: translateX(-100px) rotate(-15deg); }
+    .card-deck:active img:nth-child(3) { transform: translateX(100px) rotate(15deg); }
+
+    /* 4. Posterler (Marquee) */
+    .marquee-content img {
+        height: 40vh; /* Posterleri biraz küçült */
+    }
+    
+    .overlay-text {
+        width: 90%; /* Yazı ekranın dışına taşmasın */
+    }
+
+    /* 5. Spotify */
+    .spotify-wrapper {
+        width: 100%;
+        padding: 0 1rem;
+    }
+}
