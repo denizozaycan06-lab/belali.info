@@ -1,3 +1,4 @@
+//libary kısmı değişcek JSON a geççen
 const myLibary = [
     {
         title: "The Stranger",
@@ -38,11 +39,6 @@ const myLibary = [
             year:2018,
             desc:"",
         },
-
-        {
-
-        }
-
 ];
 
 
@@ -66,3 +62,43 @@ myLibary.forEach((book) => {
 
     shelf.appendChild(bookSpine);
 });
+
+
+const USERNAME = "denizozaycan06-lab";
+const repoList = document.getElementById("repo-list");
+
+async function getGithubRepos() {
+    try {
+      const response = await fetch(`https://api.github.com/users/${USERNAME}/repos?sort=updated&direction=desc`);
+
+      if (!response.ok) { throw new Error("Network Error"); }
+
+        const data = await response.json();
+
+        repoList.innerHTML = '';
+
+        data.slice(0, 8).forEach(repo => {
+            const div = document.createElement("div");
+            div.classList.add("repo-item");
+
+            const lang = repo.language ? repo.language : 'Code';
+            const desc = repo.description ? repo.description : 'No description provided.';
+
+            div.innerHTML = `
+                <div class="repo-row">
+                <a href="${repo.html_url}" target="_blank" class="repo-name">${repo.name}</a>
+                 <span class="repo-lang">${lang}</span>
+                </div>
+                <span class="repo-desc">${desc}</span>
+            `;
+
+            repoList.appendChild(div);
+        });
+      } catch (err) {
+        repoList.innerHTML = '<p class="error">Failed to load repositories.</p>';
+        console.error(err);
+      }
+    }
+
+
+getGithubRepos();

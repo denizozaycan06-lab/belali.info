@@ -386,6 +386,128 @@ transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
     box-shadow: 0 0 10px rgba(255,255,255,0.5);
 }
 
+/* -- github -- */
+
+#github-section {
+    background-color: #050505;
+}
+
+.github-link{
+    display: inline-block;
+    margin-top: 2rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+.code-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.terminal-window {
+    width: 450px;
+    height: 350px;
+    background-color: #0d0d0d;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-header {
+    background-color: #1a1a1a;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #333;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.teminal-title {
+    margin-left: auto;
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.teminal-body {
+padding: 15px;
+color: #ccc;
+flex: 1;
+overflow-y: auto;
+}
+
+.temrinal-body::-webkit-scrollbar {width: 6px;}
+.temrinal-body::-webkit-scrollbar-track {background: #0d0d0d;}
+.temrinal-body::-webkit-scrollbar-thumb {background: #333; border-radius: 3px;}
+
+.repo-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #222;
+    padding-bottom: 8px;
+    animation: fadeIn 0.5s ease;
+}
+
+.repo-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.repo-name {
+    padding-left: 5px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.9;
+}
+
+.repo-name:hover { color: #4CAF50; text-decoration: underline;}
+
+.repo-lang{
+    font-size: 0.7rem;
+    color: #888;
+    border: 1px solid #444;
+    padding: 2px 6px;
+    border-radius: 4px;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+.repo-desc {
+ display: block;
+ font-size: 0.75rem;
+ color: #666;
+ margin-top: 4px;
+ line-height: 1.4;
+ padding-left: 5px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
 @media (max-width: 768px) {
     .spine-shelf {
         justify-content: flex-start;
@@ -397,4 +519,10 @@ transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
     .book-spine:hover {
         width: 200px;
     }
+
+    .terminal-window {
+        width: 100%; /* Telefondan taşmasın */
+        height: 350px;
+    }
 }
+
