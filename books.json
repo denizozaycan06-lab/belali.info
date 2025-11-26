@@ -1,0 +1,56 @@
+[
+  {
+    "title": "The Stranger",
+    "author": "Albert Camus",
+    "year": 1942,
+    "desc": "Yabancılaşmanın romanı."
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "year": 1948,
+    "desc": "Distopik klasik."
+  },
+  {
+    "title": "Make it Stick",
+    "author": "Peter C. Brown",
+    "year": 2014,
+    "desc": "Öğrenme psikolojisi."
+  },
+  {
+    "title": "Les Misérables",
+    "author": "Victor Hugo",
+    "year": 1862,
+    "desc": "Sefiller."
+  },
+  {
+    "title": "Dead Souls",
+    "author": "Nikolai Gogol",
+    "year": 1842,
+    "desc": "Rus realizmi."
+  },
+  {
+    "title": "Brief Answers to the Big Questions",
+    "author": "Stephen Hawking",
+    "year": 2018,
+    "desc": "Evren üzerine son düşünceler."
+  },
+  {
+    "title": "A  Tale Of Two Cities",
+    "author": "Charles Dickens",
+    "year": 1859,
+    "desc": ""
+  },
+  {
+    "title": "Notes from Underground",
+    "author": "Fyodor Dostoyevski",
+    "year": 1864,
+    "desc": ""
+  },
+  {
+    "title": "The Giver",
+    "author": "Lois Lowry",
+    "year": 1993,
+    "desc": "Living heaven doesn't mean you're free"
+  }
+]

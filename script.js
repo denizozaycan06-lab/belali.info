@@ -1,73 +1,60 @@
-//libary kısmı değişcek JSON a geççen
-const myLibary = [
-    {
-        title: "The Stranger",
-        author: "Albert Camus",
-        year: 1942,
-        desc:"aaa",
-    },
-        {
-        title: "1984",
-        author: "George Orwell",
-        year: 1948,
-        desc:"",
-    },
-        {
-            title:"Make it Stick",
-            author:"Peter C. Brown",
-            year:2014,
-            desc:"",
-        },
-        
-        {
-            title:"Les Misérables",
-            author:"Victor Hugo",
-            year:1862,
-            desc:"",
-        },
-
-        {
-            title:"Dead Souls",
-            author:"Nikolai Gogol",
-            year:1842,
-            desc:"",
-        },
-
-        {
-            title:"Brief Answers to the Big Questions",
-            author:"Stephen Hawking",
-            year:2018,
-            desc:"",
-        },
-];
-
-
-
+// ===========================
+// 1. KÜTÜPHANE BÖLÜMÜ
+// ===========================
 
 const shelf = document.getElementById("book-shelf");
 
-myLibary.forEach((book) => {
-    const bookSpine = document.createElement("div");
-     bookSpine.classList.add("book-spine");
+async function loadLibrary() {
+    if (!shelf) return;
+    
+    try {
+        const response = await fetch('books.json');
+
+        if(!response.ok) {
+            throw new Error("Library list not found");
+        }
+
+        const books = await response.json();
+
+        books.forEach((book) => {
+            const bookSpine = document.createElement("div");
+            bookSpine.classList.add("book-spine");
+
+            // Desc yoksa boş string ata
+            const description = book.desc ? book.desc : "";
+
+            // DÜZELTME BURADA YAPILDI: 'class' ve 'spine-title' doğru yazıldı.
+            bookSpine.innerHTML = `
+                <span class="spine-title">${book.title}</span>
+                <div class="spine-details">
+                    <span class="spine-author">${book.author}</span>
+                    <span class="spine-year">${book.year}</span>
+                    <p class="spine-desc">${description}</p>
+                </div>
+             `;
+
+             shelf.appendChild(bookSpine);
+        });
+
+    } catch (err) {
+        console.error(err);
+        shelf.innerHTML = '<p style="color:#555; padding:20px;">Library encountered an error while loading</p>'
+    }
+}
+
+loadLibrary();
 
 
-     bookSpine.innerHTML = `
-       <span class="spine-title">${book.title}</span>
-        <div class="spine-details">
-            <span class="spine-author">${book.author}</span>
-            <span class="spine-year">${book.year}</span>
-            <p class="spine-desc">${book.desc}</p>
-        </div>
-    `;
-
-    shelf.appendChild(bookSpine);
-});
-
+// ===========================
+// 2. GITHUB API BÖLÜMÜ
+// ===========================
 
 const USERNAME = "denizozaycan06-lab";
 const repoList = document.getElementById("repo-list");
 
 async function getGithubRepos() {
+    if (!repoList) return; // Hata almamak için kontrol
+
     try {
       const response = await fetch(`https://api.github.com/users/${USERNAME}/repos?sort=updated&direction=desc`);
 
@@ -86,8 +73,8 @@ async function getGithubRepos() {
 
             div.innerHTML = `
                 <div class="repo-row">
-                <a href="${repo.html_url}" target="_blank" class="repo-name">${repo.name}</a>
-                 <span class="repo-lang">${lang}</span>
+                    <a href="${repo.html_url}" target="_blank" class="repo-name">${repo.name}</a>
+                    <span class="repo-lang">${lang}</span>
                 </div>
                 <span class="repo-desc">${desc}</span>
             `;
@@ -95,10 +82,9 @@ async function getGithubRepos() {
             repoList.appendChild(div);
         });
       } catch (err) {
-        repoList.innerHTML = '<p class="error">Failed to load repositories.</p>';
+        repoList.innerHTML = '<p style="color:red; padding:15px;">Failed to load repositories.</p>';
         console.error(err);
       }
     }
-
 
 getGithubRepos();

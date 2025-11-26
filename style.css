@@ -278,48 +278,58 @@ transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
     min-width: 90vw;
 }
 
+/* 1. KİTAP ÇUBUĞU */
 .book-spine {
-    width: 45px;
-    height: 100%;
+    /* Temel Ayarlar */
+    width: 40px; /* Biraz daha incelttim, daha şık durur */
     background-color: #111;
     border: 1px solid #333;
     color: #888;
-
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    transition: all 0.4s cubic-bezier(0.25,0.8,0.25, 1);
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
+    transition: all 0.3s ease;
+    
+    /* --- EN KRİTİK AYARLAR --- */
+    position: relative; /* İçindeki yazıyı buna göre ortalayacağız */
+    display: block;     /* Flex DEĞİL, Block olmalı */
+    overflow: hidden;   /* Taşan kısımları gizle */
 }
 
-.book-spine:nth-child(odd) {
-    height: 70%;
-}
-.book-spine:nth-child(even) {
-    height: 85%;
-}
-.book-spine:nth-child(3n) {
-    height: 60%;
+/* Rastgele yükseklikler */
+.book-spine:nth-child(odd) { height: 75%; }
+.book-spine:nth-child(even) { height: 90%; }
+.book-spine:nth-child(3n) { height: 65%; }
+
+/* Hover Efekti */
+.book-spine:hover {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    z-index: 10;
 }
 
-
+/* 2. BAŞLIK YAZISI (ROTATE HİLESİ) */
 .spine-title {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    font-size: 0.9rem;
-    transform: rotate(180deg);
-    font-weight: 600;
-    letter-spacing: 2px;
-    white-space: nowrap;
+    /* Konumlandırma: Kutunun tam ortasına çivile */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    /* --- SİHİR BURADA --- */
+    /* 1. Yazıya 300px gibi devasa bir genişlik veriyoruz ki kırılmasın */
+    width: 300px; 
+    
+    /* 2. Yazıyı merkezden tutup 90 derece sola yatırıyoruz */
+    transform: translate(-50%, -50%) rotate(-90deg);
+    
+    /* Görünüm Ayarları */
+    text-align: center; /* O geniş alanın ortasında dursun */
+    font-size: 10px;    /* Fontu ideal boyuta çektim */
+    font-weight: 700;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    max-height: 95%;
-    text-overflow: ellipsis;
-    overflow: hidden;
+    
+    /* Güvenlik Kilidi: Asla alt satıra inme! */
+    white-space: nowrap; 
 }
 
 
