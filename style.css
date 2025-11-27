@@ -278,20 +278,23 @@ transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
     min-width: 90vw;
 }
 
-/* 1. KİTAP ÇUBUĞU */
+/* =========================================
+   KÜTÜPHANE (DÖNDÜRME YÖNTEMİ - FINAL)
+========================================= */
+
 .book-spine {
-    /* Temel Ayarlar */
-    width: 40px; /* Biraz daha incelttim, daha şık durur */
+    /* Kutu Ayarları */
+    width: 40px; 
     background-color: #111;
     border: 1px solid #333;
     color: #888;
     cursor: pointer;
     transition: all 0.3s ease;
     
-    /* --- EN KRİTİK AYARLAR --- */
-    position: relative; /* İçindeki yazıyı buna göre ortalayacağız */
-    display: block;     /* Flex DEĞİL, Block olmalı */
-    overflow: hidden;   /* Taşan kısımları gizle */
+    /* Pozisyonlama için şart */
+    position: relative; 
+    display: block;
+    overflow: hidden;
 }
 
 /* Rastgele yükseklikler */
@@ -299,36 +302,36 @@ transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 .book-spine:nth-child(even) { height: 90%; }
 .book-spine:nth-child(3n) { height: 65%; }
 
-/* Hover Efekti */
+/* Hover: Sadece renk değişsin */
 .book-spine:hover {
     background-color: #fff;
     color: #000;
-    box-shadow: 0 0 20px rgba(255,255,255,0.3);
     z-index: 10;
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
 }
 
-/* 2. BAŞLIK YAZISI (ROTATE HİLESİ) */
+/* Başlık Yazısı */
 .spine-title {
-    /* Konumlandırma: Kutunun tam ortasına çivile */
+    /* 1. Konum: Kutunun tam ortasına sabitle */
     position: absolute;
     top: 50%;
     left: 50%;
     
-    /* --- SİHİR BURADA --- */
-    /* 1. Yazıya 300px gibi devasa bir genişlik veriyoruz ki kırılmasın */
+    /* 2. Genişlik: Yazının sığması için hayali genişlik ver */
     width: 300px; 
     
-    /* 2. Yazıyı merkezden tutup 90 derece sola yatırıyoruz */
+    /* 3. Dönüşüm: Ortala ve 90 derece döndür */
     transform: translate(-50%, -50%) rotate(-90deg);
     
-    /* Görünüm Ayarları */
-    text-align: center; /* O geniş alanın ortasında dursun */
-    font-size: 10px;    /* Fontu ideal boyuta çektim */
+    /* 4. Görünüm */
+    text-align: center;
+    font-size: 10px;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
+    color: inherit; /* Rengini ebeveyninden (book-spine) al */
     
-    /* Güvenlik Kilidi: Asla alt satıra inme! */
+    /* 5. Güvenlik: Asla satır kırma */
     white-space: nowrap; 
 }
 
@@ -521,10 +524,12 @@ overflow-y: auto;
 @media (max-width: 768px) {
     .spine-shelf {
         justify-content: flex-start;
+        gap: 1px;
+        min-width: 100%;
     }
 
     .book-spine{
-        width: 35px;
+        width: 35px !important;
     }
     .book-spine:hover {
         width: 200px;
@@ -534,5 +539,46 @@ overflow-y: auto;
         width: 100%; /* Telefondan taşmasın */
         height: 350px;
     }
+
+    .libary-header h2{
+        font-size: 2rem !important;
+        line-height: 1.1;
+        margin-bottom: 5px !important;
+    }
+
+    .libary-header p {
+        margin-top: 10px !important;
+        font-size: 0.7rem !important;
+        letter-spacing: 3px;
+        color: #888;
+    }
+
+    .libary-header .title{
+        font-size: 0.8rem;
+        margin-top: 0;
+    }
+
+    .spine-title{
+        font-size: 9px !important;
+        width: 250px !important;
+    }
+
+    .libary-wrapper {
+        padding-top: 2rem;
+        justify-content: center;
+    }
+
+    #library .library-header .title {
+        margin-top: 10px !important; /* Yukarı yapışmayı iptal et, aşağı it */
+        margin-bottom: 20px !important; /* Kitaplarla arasına mesafe koy */
+        font-size: 0.7rem !important;
+        display: block !important;
+        width: 100%;
+    }
+    
+    #library .library-header h2 {
+        margin-bottom: 0 !important; /* Başlığın alt boşluğunu sıfırla */
+    }
+   
 }
 
