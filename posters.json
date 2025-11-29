@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "drop": "drop1",
+    "title": "MERCEDES CLK GTR",
+    "subtitle": "THE SILVER ARROW",
+    "year": "1998",
+    "image": "images/d1_01.jpg",
+    "story": "Le Mans yarışının efsanevi galibi. Homologasyon kurallarının sınırlarını zorlayan, aerodinamik bir canavar. Yere basma kuvveti ve saf hızın brutalleşmiş hali."
+  },
+  {
+    "id": 2,
+    "drop": "drop1",
+    "title": "DODGE VIPER GTS",
+    "subtitle": "AMERICAN VENOM",
+    "year": "2003",
+    "image": "images/d1_02.jpg",
+    "story": "Kontrolsüz güç. V10 motorun çığlığı. Sürücüye yardım eden hiçbir elektronik sistem yok, sadece sen ve makine. Saf mekanik öfke."
+  },
+  {
+    "id": 3,
+    "drop": "drop1",
+    "title": "LEXUS LFA",
+    "subtitle": "THE ROAR OF ANGELS",
+    "year": "2010",
+    "image": "images/d1_03.jpg",
+    "story": "Mühendisliğin zirvesi. Yamaha tarafından akort edilmiş V10 motor sesi, bir otomobilden çok bir müzik enstrümanını andırır."
+  },
+  {
+    "id": 4,
+    "drop": "drop1",
+    "title": "PAGANI HUAYRA BC",
+    "subtitle": "GOD OF WIND",
+    "year": "2016",
+    "image": "images/d1_04.jpg",
+    "story": "Sanat ve bilimin birleşimi. Her bir parçası el işçiliğiyle üretilmiş, rüzgarla dans eden bir karbon fiber heykel."
+  },
+  {
+    "id": 5,
+    "drop": "drop1",
+    "title": "LAMBORGHINI REVENTON",
+    "subtitle": "STEALTH FIGHTER",
+    "year": "2007",
+    "image": "images/d1_05.jpg",
+    "story": "Savaş uçaklarından ilham alan keskin hatlar. Yola inmiş bir F-22 Raptor. Nadir, agresif ve tavizsiz."
+  },
+  {
+    "id": 6,
+    "drop": "drop1",
+    "title": "BUGATTI LA VOITURE NOIRE",
+    "subtitle": "THE BLACK CAR",
+    "year": "1941",
+    "image": "images/d1_06.jpg",
+    "story": "Tarihin en pahalı yeni otomobili. Jean Bugatti'nin kayıp Type 57 SC Atlantic modeline modern bir saygı duruşu. Lüksün son noktası."
+  },
+  {
+    "id": 7,
+    "drop": "drop1",
+    "title": "FERRARI F2002",
+    "subtitle": "RED DOMINANCE",
+    "year": "2002",
+    "image": "images/d1_07.jpg",
+    "story": "Formula 1 tarihinin en baskın araçlarından biri. Michael Schumacher'in efsanevi şampiyonluk yolculuğundaki sadık makinesi."
+  },
+  {
+    "id": 8,
+    "drop": "drop1",
+    "title": "MCLAREN MP4-12C",
+    "subtitle": "SURGICAL PRECISION",
+    "year": "2011",
+    "image": "images/d1_08.jpg",
+    "story": "Ron Dennis'in mükemmeliyetçiliği. Her virajı matematiksel bir kesinlikle alan, pist odaklı bir teknoloji harikası."
+  },
+  {
+    "id": 9,
+    "drop": "drop1",
+    "title": "AUDI QUATTRO S1",
+    "subtitle": "GROUP B MONSTER",
+    "year": "1985",
+    "image": "images/d1_09.jpg",
+    "story": "Ralli tarihinin en vahşi dönemi. Dört tekerlekten çekiş devriminin öncüsü. Toz, çamur ve turbonun ıslığı."
+  },
+  {
+    "id": 10,
+    "drop": "drop1",
+    "title": "CLS 63 AMG",
+    "subtitle": "THE GENTLEMAN'S MUSCLE",
+    "year": "2012",
+    "image": "images/d1_10.jpg",
+    "story": "Takım elbiseli bir boksör. Zarif coupe çizgilerinin altında yatan devasa V8 gücü. Otoyolların sessiz hakimi."
+  },
+  {
+    "id": 11,
+    "drop": "drop1",
+    "title": "SUBARU PROJECT MIDNIGHT",
+    "subtitle": "CARBON BEAST",
+    "year": "2024",
+    "image": "images/d1_11.jpg",
+    "story": "Goodwood Festivali için özel üretilmiş, tamamen karbondan oluşan bir zaman makinesi. WRX STI mirasının en uç noktası."
+  },
+  {
+    "id": 12,
+    "drop": "drop1",
+    "title": "MASERATI MC12",
+    "subtitle": "THE TRIDENT'S RETURN",
+    "year": "2004",
+    "image": "images/d1_12.jpg",
+    "story": "Enzo Ferrari'nin şasesi üzerine inşa edilmiş, ancak pist için özelleştirilmiş bir efsane. Uzun, geniş ve durdurulamaz."
+  }
+]

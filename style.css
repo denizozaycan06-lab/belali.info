@@ -173,16 +173,36 @@ transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
     mix-blend-mode: difference;
 }
 
-/* -- BÖLÜM 4: SPOTIFY -- */
+.enter-exhibit-btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 15px 40px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: all 0.3s;
+}
+
+.enter-exhibit-btn:hover {
+    background: #fff;
+    color: #000;
+    letter-spacing: 4px;
+}
+
+/*  SPOTIFY */
 .spotify-wrapper {
     margin-top: 2rem;
     width: 500px; 
     max-width: 90vw;
 }
 
-/* ===========================
-   MOBİL UYUMLULUK (RESPONSIVE)
-=========================== */
+/* 
+   mobil
+ */
 
 @media (max-width: 768px) {
 
@@ -278,9 +298,9 @@ transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
     min-width: 90vw;
 }
 
-/* =========================================
-   KÜTÜPHANE (DÖNDÜRME YÖNTEMİ - FINAL)
-========================================= */
+/*
+   libary
+ */
 
 .book-spine {
     /* Kutu Ayarları */
@@ -518,6 +538,141 @@ overflow-y: auto;
     to { opacity: 1; transform: translateY(0); }
 }
 
+/*platon mağrası*/
+#misson log {
+    background-color: #050505;
+     background-image: 
+     linear-gradient(rgba(255,255,255,0.03)1px,transparent 1px),
+     linear-gradient(90deg, rgba(255,255,255,003)1px,transparent 1px);
+}
+
+.log-container{
+    width: 80%;
+    max-width: 800px;
+    height: 80vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.log-container::-webkit-scrollbar {width: 4px;}
+.log-container::-webkit-scrollbar-thumb{background: #333;}
+
+.log-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: sticky;
+    top: 0;
+    background-color: #050505;
+    z-index: 10;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #222;
+}
+
+.timeline-track {
+    position: relative;
+    border-left: 2rem;
+    margin-left: 1rem;
+}
+
+.mission-item{
+    position: relative;
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: rgba(20,20,20,0.8);
+    border: 1px solid #333;
+    border-radius: 4px;
+    transition: all 0.03s ease;
+}
+
+.mission-item::before{
+    content: '';
+    position: absolute;
+    left: -2.6rem;
+    top: 2rem;
+    width: 12px;
+    height: 12px;
+    background: #000;
+    border: 2px solid #555;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.mission-item.completed {
+    opacity: 0.6;
+    border-left: 4px solid #4CAF50;
+}
+
+.mission-item.completed:hover{opacity: 1;}
+.mission-item.completed::before{background: #4CAF50; border-color: #4CAF50;}
+
+.mission-item.active {
+    border: 1px solid #fff;
+    box-shadow: 0 0 20px rgba(255, 255, 255,0.1);
+    transform: scale(1.02);
+}
+
+.mission-item.active::before {
+    background: #fff;
+    border-color: #fff;
+    box-shadow: 0 0 10px #fff;
+    animation: pulse 1.5s infinite;
+}
+
+.mission-item.locked {
+    filter: blur(3px) grayscale(100%);
+    opacity: 0.4;
+    cursor: not-allowed;
+    border: 1px dashed #444;
+}
+
+.mission-item.locked:hover {
+    filter: blur(0);
+    opacity: 0.7;
+}
+
+.mission-item.locked::before {
+    border-color: #333;background: #000;
+}
+
+.mission-meta{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.mission-category {
+    background: #222;
+    padding: 2px 6px;
+    border-radius: 2px;
+    color: #fff;
+}
+
+.mission-title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.mission-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #ccc;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@keyframes pulse {
+    0% {opacity: 1; transform: scale(1);}
+    50% {opacity: 0.5; transform: scale(1.5);}
+    100% {opacity: 1; transform: scale(1);}
+}
+
 
 
 
@@ -569,16 +724,148 @@ overflow-y: auto;
     }
 
     #library .library-header .title {
-        margin-top: 10px !important; /* Yukarı yapışmayı iptal et, aşağı it */
-        margin-bottom: 20px !important; /* Kitaplarla arasına mesafe koy */
+        margin-top: 10px !important; 
+        margin-bottom: 20px !important;
         font-size: 0.7rem !important;
         display: block !important;
         width: 100%;
     }
     
     #library .library-header h2 {
-        margin-bottom: 0 !important; /* Başlığın alt boşluğunu sıfırla */
+        margin-bottom: 0 !important; 
     }
+
+
+    .timeline-track {
+        padding-left: 1rem;
+        margin-left: 0;
+        border-left: 2px solid #222;
+    }
+
+    .mission-item::before {
+        left: -1.45rem;
+        width: 10px;
+        height: 10px;
+    }
+
+
    
 }
 
+/* -- GERİ DÖN BUTONLARI (EKSİK OLAN KISIM) -- */
+
+.back-btn {
+    position: fixed !important;
+    top: 30px !important;
+    left: auto !important;
+    right: 30px !important;
+    z-index: 10000 !important; /* Her şeyin üstünde */
+    
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    color: #ccc;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 12px 24px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    color: #fff;
+    border-color: #fff;
+    background: #000;
+    transform: translateX(-5px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Mobilde küçült */
+@media (max-width: 768px) {
+    .back-btn {
+        top: 20px !important;
+        left: 20px !important;
+        padding: 8px 16px;
+        font-size: 0.75rem;
+    }
+}
+
+/* =========================================
+   IMMERSIVE GALLERY (VIEW.HTML STİLLERİ)
+========================================= */
+
+/* Ana Panel Kutusu */
+.exhibit-panel {
+    height: 100vh;       /* Tam ekran yüksekliği */
+    width: 100vw;        /* Tam ekran genişliği */
+    scroll-snap-align: start; /* Kaydırma durağı */
+    
+    /* İŞTE EKSİK OLAN KISIM BURASI: */
+    display: flex;       /* Yan yana diz */
+    flex-direction: row; /* Soldan sağa */
+    
+    background-color: #000;
+    overflow: hidden;
+
+}
+
+/* SOL TARAF: GÖRSEL */
+.exhibit-image {
+    flex: 6; /* Ekranın %60'ı */
+    height: 100%;
+    position: relative;
+    background-color: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+}
+
+.exhibit-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Resmi kutuya sığdır, taşma yapma */
+    display: block;
+
+    filter: drop-shadow(0 0 20px rgba(0,0,0,0.8));
+}
+
+/* SAĞ TARAF: BİLGİ */
+.exhibit-info {
+    flex: 4; /* Ekranın %40'ı */
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Dikey ortala */
+    
+    padding: 4rem;
+    background-color: #050505;
+    z-index: 2; /* Resmin altında kalmasın */
+}
+
+/* MOBİL İÇİN DÜZELTME (Bunu da ekle ki telefonda patlamasın) */
+@media (max-width: 768px) {
+    .exhibit-panel {
+        flex-direction: column; /* Mobilde alt alta olsun */
+    }
+    
+    .exhibit-image {
+        flex: 1; /* %50 */
+        max-height: 50vh;
+    }
+    
+    .exhibit-info {
+        flex: 1; /* %50 */
+        padding: 2rem;
+        justify-content: flex-start;
+    }
+}

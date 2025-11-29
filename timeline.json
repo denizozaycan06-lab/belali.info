@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "date": "20 Nov 2025",
+    "title": "SYSTEM_REBOOT",
+    "category": "LIFE_OS",
+    "description": "Legacy code purged; new kernel online.",
+    "status": "completed",
+    "icon": "💀"
+  },
+  {
+    "id": 2,
+    "date": "24 Nov 2025",
+    "title": "THE_CAVE_v1.0",
+    "category": "DEV",
+    "description": "First fire ignited within the digital void.",
+    "status": "completed",
+    "icon": "💻"
+  },
+  {
+    "id": 3,
+    "date": "25 Nov 2025",
+    "title": "ENTROPY_TEST",
+    "category": "IRL_OPS",
+    "description": "Chaos mitigated via manual override.",
+    "status": "completed",
+    "icon": "🔧"
+  },
+  {
+    "id": 4,
+    "date": "28 Nov 2025",
+    "title": "DATA_SYNTHESIS",
+    "category": "INTELLECT",
+    "description": "Academic targets acquired and neutralized.",
+    "status": "completed",
+    "icon": "📈"
+  },
+  {
+    "id": 5,
+    "date": "CURRENT",
+    "title": "AUGMENTED_VISION",
+    "category": "ENGINEERING",
+    "description": "Overlaying digital precision onto biological sight.",
+    "status": "active",
+    "icon": "🏍️"
+  },
+  {
+    "id": 6,
+    "date": "Q1 2026",
+    "title": "ATLAS_PROTOCOL",
+    "category": "TEMPLE",
+    "description": "A lethal interview with gravity.",
+    "status": "locked",
+    "icon": "🔒"
+  },
+  {
+    "id": 7,
+    "date": "25 Mar 2026",
+    "title": "MAGNUM OPUS",
+    "category": "MILESTONE",
+    "description": "The final transmutation of shadow into truth.",
+    "status": "locked",
+    "icon": "👁️"
+  }
+]

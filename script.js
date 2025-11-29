@@ -88,3 +88,48 @@ async function getGithubRepos() {
     }
 
 getGithubRepos();
+
+
+
+//platon mağrası
+
+const missionList = document.getElementById('timeline-target');
+
+async function loadMissions() {
+    if (!missionList) return;
+
+
+    try {
+        const response = await fetch('timeline.json');
+        if (!response.ok) throw new Error("Mission log not found");
+
+        const missions = await response.json();
+
+        missions.forEach(mission => {
+            const div = document.createElement('div');
+
+            div.classList.add('mission-item',mission.status);
+
+            div.innerHTML = `
+            <div class="misson-meta">
+                <span class="mission-date">${mission.date}</span>
+                <span class="mission-category">[ ${mission.category} ]</span>
+            </div>
+            <h3 class="mission-titile">
+                <span>${mission.icon}</span> ${mission.title}
+            </h3>
+
+            <p class="mission-desc">
+                > ${mission.description}
+            </p>
+            `;
+
+           missionList.appendChild(div); 
+        });
+    } catch (err) {
+        console.error(err);
+        missonList.innerHTML = '<p style="color:#555; text-align:center;">// SYSTEM ERROR: LOGS NOT FOUND</p>';
+    }
+}
+
+loadMissions();
