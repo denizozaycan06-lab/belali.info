@@ -46,7 +46,8 @@ async function loadExhibition() {
             <p style="font-size: 1.5rem; color:#fff; font-weight:300; letter-spacing:2px; font-style:italic;">
                 "${dropInfo.motto}"
             </p>
-            <div style="margin-top:50px; width:2px; height:100px; background:#fff;"></div> <p style="margin-top:20px; font-size:0.8rem; color:#888;">SCROLL TO EXPLORE</p>
+            
+             <p style="margin-top:20px; font-size:0.8rem; color:#888;">SCROLL TO EXPLORE</p>
         `;
         
         container.appendChild(introPanel);
