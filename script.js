@@ -116,7 +116,7 @@ async function loadMissions() {
                 <span class="mission-category">[ ${mission.category} ]</span>
             </div>
             <h3 class="mission-titile">
-                <span>${mission.icon}</span> ${mission.title}
+                ${mission.title}
             </h3>
 
             <p class="mission-desc">

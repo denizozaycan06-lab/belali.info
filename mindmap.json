@@ -1,0 +1,33 @@
+[
+  
+  {"id": "BELALI", "group": 1, "val": 30},
+
+ 
+  {"id": "ENGINEERING", "group": 2, "val": 20},
+  {"id": "INTELLECT", "group": 2, "val": 20},
+  {"id": "AESTHETICS", "group": 2, "val": 20},
+  {"id": "THE TEMPLE", "group": 2, "val": 20},
+  
+
+  {"id": "Python / Data", "group": 3, "val": 10},
+  {"id": "React.js", "group": 3, "val": 10},
+  {"id": "Project HUD", "group": 3, "val": 12},
+  {"id": "Hardware", "group": 3, "val": 8},
+  
+ 
+  {"id": "Economics", "group": 4, "val": 10},
+  {"id": "Statistics", "group": 4, "val": 10}, 
+  {"id": "Stoicism", "group": 4, "val": 10},
+  {"id": "Zen", "group": 4, "val": 8},
+  
+
+  {"id": "Brutalism", "group": 5, "val": 10},
+  {"id": "Dark UI", "group": 5, "val": 10},
+  {"id": "Poster Art", "group": 5, "val": 8},
+  
+
+  {"id": "Powerlifting", "group": 6, "val": 12},
+  {"id": "Wrestling", "group": 6, "val": 8},
+  {"id": "Cars", "group": 6, "val": 10}, 
+  {"id": "Winter Arc", "group": 6, "val": 8}
+]

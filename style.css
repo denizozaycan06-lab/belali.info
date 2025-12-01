@@ -422,6 +422,49 @@ transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
     box-shadow: 0 0 10px rgba(255,255,255,0.5);
 }
 
+/*cortex*/
+#mindmap  {
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.mindmap-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mindmap-header{
+    position: absolute;
+    top: 50px;
+    z-index: 10;
+    text-align: center;
+    pointer-events: none;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(2px);
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+#network-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+}
+
+#network-canvas:active {
+    cursor: grabbing;
+}
+
+
+
+
 /* -- github -- */
 
 #github-section {
@@ -542,33 +585,46 @@ overflow-y: auto;
 }
 
 /*platon mağrası*/
-#misson log {
+#misson-log {
     background-color: #050505;
      background-image: 
      linear-gradient(rgba(255,255,255,0.03)1px,transparent 1px),
      linear-gradient(90deg, rgba(255,255,255,003)1px,transparent 1px);
+     background-size: 50px 50px;
+
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+     gap: 10rem;
 }
 
 .log-container{
     width: 80%;
     max-width: 800px;
-    height: 80vh;
+    height: 60vh;
     overflow-y: auto;
-    padding-right: 10px;
+    padding: 0 40px;
+    box-sizing: border-box;
+    padding-top: 10px;
 }
 
 .log-container::-webkit-scrollbar {width: 4px;}
 .log-container::-webkit-scrollbar-thumb{background: #333;}
 
 .log-header {
+    width: 600px;
+    height: 60vh;
+    overflow-y: auto;
+    padding-left: 20px;
+    border-left: 1px solid rgba(255, 255, 255,0.1);
     text-align: center;
-    margin-bottom: 3rem;
-    position: sticky;
-    top: 0;
-    background-color: #050505;
+    margin-bottom: 2rem;
+    border: none;
+    background-color: transparent;
     z-index: 10;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #222;
+   
+   
 }
 
 .timeline-track {
@@ -581,7 +637,7 @@ overflow-y: auto;
     position: relative;
     margin-bottom: 3rem;
     padding: 1.5rem;
-    background: rgba(20,20,20,0.8);
+    background: transparent;
     border: 1px solid #333;
     border-radius: 4px;
     transition: all 0.03s ease;
@@ -676,7 +732,27 @@ overflow-y: auto;
     100% {opacity: 1; transform: scale(1);}
 }
 
+@media (max-width: 768px) {
+    #mission-log {
+        flex-direction: column; /* Mobilde alt alta */
+        gap: 3rem; /* Boşluğu azalt */
+        padding: 2rem 0;
+    }
+    
+    .log-header {
+        text-align: center; /* Mobilde ortala */
+        margin-bottom: 0;
+    }
+    
+    .log-container {
+        width: 90%; /* Mobilde ekranı doldur */
+        border-left: none; /* Çizgiyi kaldır */
+        padding-left: 0;
+    }
+}
 
+
+/*libary media*/
 
 
 @media (max-width: 768px) {
