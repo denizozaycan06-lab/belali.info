@@ -33,6 +33,37 @@ async function loadLibrary() {
                 </div>
              `;
 
+             // make focusable for keyboard users
+             bookSpine.setAttribute('tabindex', '0');
+             bookSpine.setAttribute('aria-expanded', 'false');
+
+             // declare role for assistive tech and support tap-to-open on mobile
+             bookSpine.setAttribute('role', 'button');
+
+             bookSpine.addEventListener('click', () => {
+                 if (window.innerWidth <= 768) {
+                     // close other open books and update aria state
+                     document.querySelectorAll('.book-spine.open').forEach(b => {
+                         if (b !== bookSpine) {
+                             b.classList.remove('open');
+                             b.setAttribute('aria-expanded', 'false');
+                         }
+                     });
+
+                     const isOpen = bookSpine.classList.toggle('open');
+                     bookSpine.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
+                     if (isOpen) {
+                         bookSpine.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+                     }
+                 }
+             });
+
+             bookSpine.addEventListener('keydown', (e) => {
+                 if (e.key === 'Enter') bookSpine.click();
+                 if (e.key === 'Escape') bookSpine.classList.remove('open');
+             });
+
              shelf.appendChild(bookSpine);
         });
 
@@ -43,6 +74,16 @@ async function loadLibrary() {
 }
 
 loadLibrary();
+
+// Add a one-time document click handler to close opened book on outside click
+if (!window._libraryCloseHandlerAdded) {
+    window._libraryCloseHandlerAdded = true;
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.book-spine')) {
+            document.querySelectorAll('.book-spine.open').forEach(b => b.classList.remove('open'));
+        }
+    });
+}
 
 
 // ===========================
@@ -111,11 +152,11 @@ async function loadMissions() {
             div.classList.add('mission-item',mission.status);
 
             div.innerHTML = `
-            <div class="misson-meta">
+            <div class="mission-meta">
                 <span class="mission-date">${mission.date}</span>
                 <span class="mission-category">[ ${mission.category} ]</span>
             </div>
-            <h3 class="mission-titile">
+            <h3 class="mission-title">
                 ${mission.title}
             </h3>
 
@@ -128,7 +169,7 @@ async function loadMissions() {
         });
     } catch (err) {
         console.error(err);
-        missonList.innerHTML = '<p style="color:#555; text-align:center;">// SYSTEM ERROR: LOGS NOT FOUND</p>';
+        missionList.innerHTML = '<p style="color:#555; text-align:center;">// SYSTEM ERROR: LOGS NOT FOUND</p>';
     }
 }
 

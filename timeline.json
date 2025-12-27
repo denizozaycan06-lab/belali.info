@@ -21,10 +21,18 @@
     "title": "AUGMENTED_VISION",
     "category": "ENGINEERING",
     "description": "Overlaying digital precision onto biological sight.",
-    "status": "active"
+    "status": "locked"
   },
   {
     "id": 4,
+    "date": "CURRENT",
+    "title": "PROJECT_TELEMETRY",
+    "category":"ENGINEERING",
+    "description": "projecting...",
+    "status":"active"
+  },
+  {
+    "id": 5,
     "date": "Q1 2026",
     "title": "ATLAS_PROTOCOL",
     "category": "TEMPLE",
@@ -32,11 +40,21 @@
     "status": "locked"
   },
   {
-    "id": 5,
+    "id": 6,
     "date": "25 Mar 2026",
     "title": "MAGNUM OPUS",
     "category": "MILESTONE",
     "description": "The final transmutation of shadow into truth.",
     "status": "locked"
-  }
+  },
+   {
+    "id": 7,
+    "date": "Q1 2026",
+    "title": "DIGITAL CLOCK",
+    "category": "ENGINEERING",
+    "description": "Fırst steps.",
+    "status": "active"
+   }
+  
+  
 ]

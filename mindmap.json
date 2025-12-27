@@ -1,33 +1,34 @@
 [
-  
-  {"id": "BELALI", "group": 1, "val": 30},
+  { "id": "CORE", "label": "BELALI", "group": 1, "size": 30 },
 
- 
-  {"id": "ENGINEERING", "group": 2, "val": 20},
-  {"id": "INTELLECT", "group": 2, "val": 20},
-  {"id": "AESTHETICS", "group": 2, "val": 20},
-  {"id": "THE TEMPLE", "group": 2, "val": 20},
-  
+  { "id": "ENG", "label": "ENGINEERING", "group": 3, "size": 20 },
+  { "id": "INT", "label": "INTELLECT", "group": 4, "size": 20 },
+  { "id": "AES", "label": "AESTHETICS", "group": 5, "size": 20 },
+  { "id": "TMP", "label": "THE TEMPLE", "group": 6, "size": 20 },
 
-  {"id": "Python / Data", "group": 3, "val": 10},
-  {"id": "React.js", "group": 3, "val": 10},
-  {"id": "Project HUD", "group": 3, "val": 12},
-  {"id": "Hardware", "group": 3, "val": 8},
-  
- 
-  {"id": "Economics", "group": 4, "val": 10},
-  {"id": "Statistics", "group": 4, "val": 10}, 
-  {"id": "Stoicism", "group": 4, "val": 10},
-  {"id": "Zen", "group": 4, "val": 8},
-  
+  { "id": "py", "label": "Python / Data", "group": 3, "size": 10 },
+  { "id": "react", "label": "React.js", "group": 3, "size": 10 },
+  { "id": "hud", "label": "Project HUD", "group": 3, "size": 12 },
+  { "id": "hw", "label": "Hardware", "group": 3, "size": 8 },
+  { "id": "cars", "label": "Cars", "group": 3, "size": 12 },
 
-  {"id": "Brutalism", "group": 5, "val": 10},
-  {"id": "Dark UI", "group": 5, "val": 10},
-  {"id": "Poster Art", "group": 5, "val": 8},
-  
+  { "id": "phys", "label": "App. Physics", "group": 3, "size": 10 },
+  { "id": "aero", "label": "Aerodynamics", "group": 3, "size": 10 },
+  { "id": "mat", "label": "Material Sci.", "group": 3, "size": 10 },
+  { "id": "iot", "label": "IoT & Systems", "group": 3, "size": 10 },
+  { "id": "thermo", "label": "Thermodynamics", "group": 3, "size": 10 },
 
-  {"id": "Powerlifting", "group": 6, "val": 12},
-  {"id": "Wrestling", "group": 6, "val": 8},
-  {"id": "Cars", "group": 6, "val": 10}, 
-  {"id": "Winter Arc", "group": 6, "val": 8}
+  { "id": "eco", "label": "Economics", "group": 4, "size": 8 },
+  { "id": "stat", "label": "Statistics", "group": 4, "size": 8 },
+  { "id": "stoic", "label": "Stoicism", "group": 4, "size": 12 },
+  { "id": "calc", "label": "Eng. Math", "group": 4, "size": 10 },
+  { "id": "lead", "label": "Tech Leadership", "group": 4, "size": 10 },
+
+  { "id": "brut", "label": "Brutalism", "group": 5, "size": 10 },
+  { "id": "dui", "label": "Dark UI", "group": 5, "size": 10 },
+  { "id": "gfx", "label": "Graphic Design", "group": 5, "size": 8 },
+
+  { "id": "lift", "label": "Powerlifting", "group": 6, "size": 12 },
+  { "id": "ball", "label": "Basketball", "group": 6, "size": 8 },
+  { "id": "wint", "label": "Winter Arc", "group": 6, "size": 8 }
 ]

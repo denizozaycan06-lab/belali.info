@@ -58,7 +58,7 @@ async function loadExhibition() {
 
             section.innerHTML = `
                 <div class="exhibit-image">
-                    <img src="${poster.image}" alt="${poster.title}">
+                    <img loading="lazy" src="${poster.image}" alt="${poster.title}">
                 </div>
                 
                 <div class="exhibit-info">
@@ -73,7 +73,7 @@ async function loadExhibition() {
 
             container.appendChild(section);
         });
-    } catch (err) { console.error(err)}
+    } catch (err) { console.error(err); }
 }
 
 loadExhibition();
